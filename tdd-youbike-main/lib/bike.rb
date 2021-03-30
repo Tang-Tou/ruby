@@ -28,8 +28,6 @@ class Bike
     p @time_nonuser
   end
 
-  # 超過 4 小時，但於 8 小時內還車，第 4~8 小時費率為每 30 分鐘 20 元
-
   def cost_nonuser
     if @time_nonuser < 240
       @cost_nonuser = ((@time_nonuser /30.0).ceil * 10).round
