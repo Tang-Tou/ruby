@@ -31,8 +31,10 @@ class Bike
   def cost_nonuser
     if @time_nonuser < 240
       @cost_nonuser = ((@time_nonuser /30.0).ceil * 10).round
-    elsif @time_nonuser >= 240 && @time_nonuser < 480
+    elsif @time_nonuser >= 240 
       @cost_nonuser = 80 + (((@time_nonuser - 240) /30.0).ceil * 20 ).round
+    else
+      @cost_nonuser = 80 + 160 + (((@time_nonuser - 480) /30.0).ceil * 40 ).round
     end
     @cost_nonuser
   end
