@@ -1,0 +1,8 @@
+task :goto_toliet => :open_the_door do
+  puts "上廁所"
+end
+
+task :open_the_door do
+  puts "開門"
+end
+
